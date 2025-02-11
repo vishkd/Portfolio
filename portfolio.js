@@ -1,14 +1,18 @@
-// Ensure the element exists before attaching the event listener
-let projects = document.getElementById("projects");
+let button = document.getElementById("theme");
+let container = document.getElementById("container");
+let image=document.getElementById("sun");
 
-if (projects) {
-    projects.addEventListener("click", (e) => {
-        e.preventDefault(); // Optional: prevent default click behavior if needed
-
-        // Scroll smoothly to the "projects" section
-        projects.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
-}
+button.addEventListener("click", () => {
+    if (container.style.background === "white") {
+        container.style.transition = "1.5s"
+        container.style.background = " #0d1b2a";
+        container.style.color = "beige";
+        image.src="./sun_icon.jpg"
+    }
+    else {
+        container.style.transition = "1.5s"
+        container.style.background = "white";
+        container.style.color = "black";
+        image.src="./moon.jpg";
+    }
+});

@@ -1,5 +1,4 @@
 * {
-    color: beige;
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +13,28 @@ header {
     background-color: #1b263b;
     padding-top: 5px;
     padding-bottom: 5px;
+    position: relative;
+}
+
+/* Theme Toggle Button */
+#theme {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#sun {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#theme:hover #sun {
+    transform: scale(1.1);
 }
 
 #header {
@@ -24,7 +45,9 @@ header {
     margin-bottom: 6px;
     text-decoration: none;
 }
-#heading{
+
+#heading {
+    display: inline-block;
     text-align: center;
     margin-top: 15px;
     margin-left: 20px;
@@ -32,7 +55,8 @@ header {
     text-decoration: none;
     color: beige;
 }
-#vishalarya, #sections, #contact, #projects, #git {
+
+#vishalarya, #sections, #contact, #projects, #git, #resume {
     margin-top: 15px;
     margin-left: 20px;
     margin-bottom: 6px;
@@ -100,6 +124,15 @@ article {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #theme {
+        top: 10px;
+        right: 20px;
+    }
+
+    #sun {
+        width: 28px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -115,7 +148,7 @@ article {
         margin: auto;
     }
 
-    #vishalarya, #sections, #contact, #projects, #git {
+    #vishalarya, #sections, #contact, #projects, #git, #resume {
         margin: 10px 0;
         text-align: center;
     }
@@ -144,6 +177,15 @@ article {
     #pro {
         margin-left: 10px;
         text-align: center;
+    }
+
+    #theme {
+        top: 10px;
+        right: 15px;
+    }
+
+    #sun {
+        width: 26px;
     }
 }
 
@@ -175,8 +217,18 @@ article {
         margin-left: 0;
     }
 
-    #vishalarya, #sections, #contact, #projects, #git {
+    #vishalarya, #sections, #contact, #projects, #git, #resume {
         font-size: 14px;
+    }
+
+    #theme {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+
+    #sun {
+        width: 24px;
     }
 }
 
